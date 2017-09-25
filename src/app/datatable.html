@@ -1,0 +1,46 @@
+<div class="widgets">
+    <div class="container">
+        <div class="input-group">
+            <input type="text" [(ngModel)]="company" class="form-control" placeholder="Search" />
+        </div>
+    </div>
+    <div class="container">
+        <div class="table-responsive">
+
+            <table class="table table-striped">
+                <tr>
+                    <th>Consultant Id</th>
+                    <th>Company Name</th>
+                    <th>Contact Person</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Rating</th>
+                    <th>Edit</th>
+                </tr>
+                <tbody>
+                    <tr *ngFor="let item of data | searchfilter:company">
+                        <td>{{item.id}}</td>
+                        <td>
+                            {{item.companyname}}
+                            <ul *ngFor="let project of item.projects">
+
+                                <li>{{project.name}} - {{project.rating}}</li>
+
+                            </ul>
+
+                        </td>
+                        <td>{{item.contactperson}}</td>
+                        <td>{{item.email}}</td>
+                        <td>{{item.address}}</td>
+                        <td>{{item.rating}}</td>
+                        <td><p><span class="glyphicon glyphicon-pencil"></span></p></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+
+</div>
