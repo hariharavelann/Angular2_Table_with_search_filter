@@ -16,12 +16,12 @@
                     </tr>
                 </thead>
                 <tbody *ngFor="let item of data | searchfilter:company;let i =index">
-                    <tr class="info">
+                    <tr >
                         <td>{{item.companyname}}</td>
                         <td>{{item.contactperson}}</td>
                         <td>{{item.email}}</td>
                         <td>{{item.address}}</td>
-                        <td><span class="fa fa-star checked"></span>
+                        <td *ngIf="item.rating > 0"><span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star-half-full checked"></span>
@@ -33,7 +33,11 @@
                         <td colspan="6" [ngClass]="item.display">
 
                             <ul *ngFor="let project of item.projects">
-                                <li>{{project.name}} - {{project.rating}} <span (click)="toggleTaskDisplay(item.id,project.id)"
+                                <li>{{project.name}} - <div><span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span></div> <span (click)="toggleTaskDisplay(item.id,project.id)"
                                         [ngClass]="project.collapseIcon"></span></li>
                                 <ul *ngFor="let task of project.tasks" [ngClass]="project.display">
                                     <li>{{task.id}} - {{task.name}}</li>

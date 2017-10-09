@@ -27,7 +27,7 @@ export class DataTable {
   }
 
   toggleTaskDisplay(itemId, projectId) {
-    console.log(projectId +'item id '+itemId);
+    console.log(projectId + 'item id ' + itemId);
     var currentState = this.data[itemId - 1].projects[projectId - 1].display;
     var currentIcon = this.data[itemId - 1].projects[projectId - 1].collapseIcon;
     if (currentState === "hide") {
@@ -50,6 +50,10 @@ export class DataTable {
     else {
       this.data[id - 1].display = "hide";
       this.data[id - 1].collapseIcon = "glyphicon glyphicon-chevron-right";
+      for (var index = 0; index < this.data[id - 1].projects.length; index++) {
+        this.data[id - 1].projects[index].display = "hide";
+        this.data[id - 1].projects[index].collapseIcon = "glyphicon glyphicon-chevron-right";
+      }
     }
   }
 
