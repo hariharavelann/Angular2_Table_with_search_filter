@@ -4,43 +4,47 @@
             <input type="text" [(ngModel)]="company" class="form-control" placeholder="Search" />
         </div>
     </div>
+
     <div class="container">
-        <div class="table-responsive">
-
-            <table class="table table-striped">
-                <tr>
-                    <th>Consultant Id</th>
-                    <th>Company Name</th>
-                    <th>Contact Person</th>
-                    <th>Email</th>
-                    <th>Address</th>
-                    <th>Rating</th>
-                    <th>Edit</th>
-                </tr>
-                <tbody>
-                    <tr *ngFor="let item of data | searchfilter:company">
-                        <td>{{item.id}}</td>
-                        <td>
-                            {{item.companyname}}
-                            <ul *ngFor="let project of item.projects">
-
-                                <li>{{project.name}} - {{project.rating}}</li>
-
-                            </ul>
-
-                        </td>
+        <div class="row">
+            <table class="col-md-12 table table-striped cf">
+                <thead>
+                    <tr>
+                        <th *ngFor="let column of columns | columnfilter:company">
+                            {{column}}
+                        </th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let item of data | searchfilter:company;let i =index">
+                    <tr class="info">
+                        <td>{{item.companyname}}</td>
                         <td>{{item.contactperson}}</td>
                         <td>{{item.email}}</td>
                         <td>{{item.address}}</td>
-                        <td>{{item.rating}}</td>
-                        <td><p><span class="glyphicon glyphicon-pencil"></span></p></td>
-                    </tr>
+                        <td><span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star-half-full checked"></span>
+                            <span class="fa fa-star"></span></td>
 
+                        <td><span (click)="toggleDisplay(item.id)" [ngClass]="item.collapseIcon"></span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" [ngClass]="item.display">
+
+                            <ul *ngFor="let project of item.projects">
+                                <li>{{project.name}} - {{project.rating}} <span (click)="toggleTaskDisplay(item.id,project.id)"
+                                        [ngClass]="project.collapseIcon"></span></li>
+                                <ul *ngFor="let task of project.tasks" [ngClass]="project.display">
+                                    <li>{{task.id}} - {{task.name}}</li>
+                                </ul>
+                            </ul>
+                        </td>
+
+                    </tr>
                 </tbody>
 
             </table>
         </div>
-
     </div>
-
 </div>
