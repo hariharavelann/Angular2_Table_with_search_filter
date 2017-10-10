@@ -1,1 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+  font-family: 'Roboto', sans-serif;
+}
+.stylish-input-group input[type="text"]{
+  border-right-width:0px;
+  background: #F8F8F8;
+  border-color: #C9C9C9;
+}
+.input-group-addon{
+  background: 0px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  background: #F8F8F8;
+  border-color: #C9C9C9;
+}
+
+.widgets .searchContainer{
+  padding-left: 0px;
+}
+
+.widgets .tableContainer{
+  border: 1px solid #ddd;
+}
+
+.tableContainer .table-striped  {
+  margin-bottom: 0px;
+}
+
+.tableContainer .table-striped thead tr th {
+  border:1px solid #C9C9C9;
+  border-top: 0px;
+}
+.tableContainer .table-striped tbody tr td {
+  background:#fff;
+  border: 0px;
+  font-weight: 700;
+  color: #888888;
+}
+.tableContainer .table-striped tbody tr td:first-child {
+  color: #000;
+}
+
+.tableContainer{
+  margin-top:10px;
+}
+.table>tbody+tbody{
+  border-top: 1px solid #ddd;
+}
+
+.projSec{
+  display: flex;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.ratingDiv {
+  position: absolute;
+  left: 250px;
+  width: 200px;
+}
+
+.ratingDiv .glyphicon  {
+  left: 65px;
+  cursor: pointer;
+}
+
+ul li {
+  list-style: none;
+}

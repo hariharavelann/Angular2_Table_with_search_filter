@@ -208,11 +208,11 @@ export class DataTablesService {
 
   columns = [
 
-    "companyname",
-    "contactperson",
-    "email",
-    "address",
-    "rating"
+    "Company Name",
+    "Contact Person",
+    "Email",
+    "Address",
+    "Rating"
   ];
 
   getProjectData(): Promise<any> {
