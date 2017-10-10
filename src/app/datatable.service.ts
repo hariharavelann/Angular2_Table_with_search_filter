@@ -10,12 +10,12 @@ export class DataTablesService {
       {
         "id": 1,
         "name": "ABC Constructions",
-        "rating": "5"
+        "rating": 5
       },
       {
         "id": 3,
         "name": "KG Foundations",
-        "rating": "5"
+        "rating": 5
       }
     ]
   }];
@@ -28,14 +28,14 @@ export class DataTablesService {
     "contactperson": "Sudhakar",
     "email": "Sudhakar@abcconstructions.com",
     "address": "Chennai",
-    "rating": "4.66",
+    "rating": 4.5,
     "collapseIcon": "glyphicon glyphicon-chevron-right",
     "display": "hide",
     "projects": [
       {
         "id": 1,
         "name": "Gangavaram Port",
-        "rating": "5",
+        "rating": 5,
         "collapseIcon": "glyphicon glyphicon-chevron-right",
         "display": "hide",
         "tasks": [
@@ -51,7 +51,7 @@ export class DataTablesService {
       {
         "id": 2,
         "name": "Durgapur Airport",
-        "rating": "4",
+        "rating": 4,
         "collapseIcon": "glyphicon glyphicon-chevron-right",
         "display": "hide",
         "tasks": [
@@ -65,7 +65,7 @@ export class DataTablesService {
       }, {
         "id": 3,
         "name": "Vizag Port",
-        "rating": "5",
+        "rating": 5,
         "collapseIcon": "glyphicon glyphicon-chevron-right",
         "display": "hide",
         "tasks": [
@@ -85,14 +85,14 @@ export class DataTablesService {
     "contactperson": "Kumar",
     "email": "kumar@skcconstructions.com",
     "address": "Chennai",
-    "rating": "4",
+    "rating": 4,
     "collapseIcon": "glyphicon glyphicon-chevron-right",
     "display": "hide",
     "projects": [
       {
         "id": 1,
         "name": "Vizag Port",
-        "rating": "4",
+        "rating": 4,
         "collapseIcon": "glyphicon glyphicon-chevron-right",
         "display": "hide",
         "tasks": [
@@ -107,7 +107,7 @@ export class DataTablesService {
       {
         "id": 2,
         "name": "ECR Extn",
-        "rating": "4",
+        "rating": 4,
         "collapseIcon": "glyphicon glyphicon-chevron-right",
         "display": "hide",
         "tasks": [
@@ -127,14 +127,14 @@ export class DataTablesService {
     "contactperson": "Srinivas",
     "email": "srini@kgfoundations.com",
     "address": "Hyderabad",
-    "rating": "3.5",
+    "rating": 3.5,
     "collapseIcon": "glyphicon glyphicon-chevron-right",
     "display": "hide",
     "projects": [
       {
         "id": 1,
         "name": "Gangavaram Port",
-        "rating": "3",
+        "rating": 3,
         "collapseIcon": "glyphicon glyphicon-chevron-right",
         "display": "hide",
         "tasks": [
@@ -149,7 +149,7 @@ export class DataTablesService {
       {
         "id": 2,
         "name": "Hyderabad Metro",
-        "rating": "4",
+        "rating": 4,
         "collapseIcon": "glyphicon glyphicon-chevron-right",
         "display": "hide",
         "tasks": [
@@ -168,14 +168,14 @@ export class DataTablesService {
     "contactperson": "Rahul",
     "email": "Rahul@rgbuilders.com",
     "address": "Mumbai",
-    "rating": "3.5",
+    "rating": 3.5,
     "collapseIcon": "glyphicon glyphicon-chevron-right",
     "display": "hide",
     "projects": [
       {
         "id": 1,
         "name": "Durgapur Airport",
-        "rating": "3",
+        "rating": 3,
         "collapseIcon": "glyphicon glyphicon-chevron-right",
         "display": "hide",
         "tasks": [
@@ -190,7 +190,7 @@ export class DataTablesService {
       {
         "id": 2,
         "name": "Hyderabad Metro",
-        "rating": "4",
+        "rating": 4,
         "collapseIcon": "glyphicon glyphicon-chevron-right",
         "display": "hide",
         "tasks": [
